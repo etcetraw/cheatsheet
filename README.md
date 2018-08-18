@@ -45,3 +45,8 @@ Migrations
             return 1;
         }
 ```
+
+Rendering ContentItme or Shape
+```
+ content item => Build shape => render shape
+```
