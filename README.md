@@ -1,5 +1,9 @@
 # cheatsheet
-```
+
 Convert a jobject to ContentItem.
-contentItem = jObject.ToObject<ContentItem>();
+```
+                if (obj is JObject jObject)
+                {
+                    contentItem = jObject.ToObject<ContentItem>();
+                }
 ```
