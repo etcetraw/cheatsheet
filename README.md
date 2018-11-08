@@ -50,6 +50,8 @@ Rendering ContentItme or Shape
 ```
  content item => Build shape => render shape
 ```
+
+Update Fields from code
 ```
                 var li = await _contentManager.NewAsync("PromotionProduct");
                 var lip = li.As<PromotionProductPart>();
