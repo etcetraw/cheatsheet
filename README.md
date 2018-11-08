@@ -50,3 +50,26 @@ Rendering ContentItme or Shape
 ```
  content item => Build shape => render shape
 ```
+```
+                var li = await _contentManager.NewAsync("PromotionProduct");
+                var lip = li.As<PromotionProductPart>();
+                var pi = new ProductImage();
+                pi.Paths = new[] { "path1.jpg", "path2.jpg" };
+                lip.Apply("ProductImage", pi);
+                var image = lip.Get<ProductImage>("ProductImage");
+
+                var a = new TextField();
+                a.Text = "Test text";
+                lip.Apply("SKU", a);
+
+                var b = new DateField();
+                b.Value = new DateTime().AddSeconds(1223345);
+                lip.Apply("Date", b);
+
+                var c = new NumericField();
+                c.Value = 999;
+                lip.Apply("Price", c);
+
+               li.Apply(lip);
+                await _contentManager.CreateAsync(li);
+```
